@@ -1,0 +1,17 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      # https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }
+      # app/css/foundation.css: {}
+      kit/css/styles.css: {}
+      kit/css/print.css: { media: print }
+  js:
+    kit/js/vendor/foundation.min.js: {}
+    kit/js/vendor/jquery.flexslider-min.js: {}
+    kit/js/vendor/jquery.validate.min.js: {}
+    kit/js/local/script.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery

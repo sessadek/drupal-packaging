@@ -1,0 +1,27 @@
+name: Pyxicom
+type: theme
+description: 'starter theme in drupal project Pyxicom'
+version: VERSION
+core: 8.x
+libraries:
+  - pyxicom/global
+ckeditor_stylesheets:
+  - https://fonts.googleapis.com/css?family=Amatic+SC:400,700%7CDosis:200,300,400,500,600,700,800%7CKhand:300,400,500,600,700%7CLato:300,300i,400,400i,700,700i
+  - kit/css/ckeditor.css
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css
+  - core/modules/views/css/views.module.css
+libraries-override:
+  eu_cookie_compliance/eu_cookie_compliance:
+    css:
+      state:
+        css/eu_cookie_compliance.css: kit/drupal.modules/eu_cookie_compliance/css/eu_cookie_compliance.css
+base theme: stable
+regions:
+  header: Header
+  mainMenu: MainMenu
+  breadcrumbs: breadcrumbs
+  content: Content
+  # sidebar_first: 'Sidebar first'
+  footer: Footer
+engine: twig

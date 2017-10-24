@@ -1,0 +1,196 @@
+// body {
+// 	padding-top: 56px;
+// }
+
+// header {
+// 	background-color: $gray;
+// }
+
+//  header top
+
+#block-menuentete {
+	@extend %container;
+	// padding-top: rem(8);
+	// padding-bottom: rem(10);
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	position: relative;
+	@include bp-lt($small) {
+		background-color: $midnight;
+		border-bottom: $border;
+		height: 56px;
+		padding-top: 10px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+	}
+	@include bp-gt($small) {
+		&:before {
+			content: '';
+			display: block;
+			background-color: $borderColor;
+			position: absolute;
+			width: calc(100% - 36px);
+			height: 1px;
+			bottom: 0;
+			left: 15px;
+			right: 0;
+		}
+	}
+	ul {
+		text-align: right;
+		@include bp-lt($small) {
+			text-align: left;
+		}
+	}
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		&:not(:last-child) {
+			margin-right: rem(18);
+		}
+
+		&:first-child {
+			margin-right: rem(20);
+			@include bp-lt($small) {
+				vertical-align: top;
+			}
+		}
+	}
+
+	.item-contact {
+		font-size: rem(20);
+		font-family: $khand;
+		text-transform: capitalize;
+		color: $midnight;
+		padding-right: 42px;
+		position: relative;
+		font-weight: 600;
+		top: 2px;
+		background: url("#{$image}sprites/envelop.png") no-repeat 100% 3px;
+		transition: 0.3s all;
+		&:hover {
+			padding-right: 45px;
+		}
+		@include bp-lt($small) {
+			font-size: 0;
+			background: url("#{$image}sprites/envelop-white.png") no-repeat 0 5px;
+			width: 32px;
+	    height: 36px;
+	    display: inline-block;
+	    vertical-align: top;
+	    padding-left: 0;
+		}
+	}
+
+	[class*="item-fb"],
+	[class*="item-yt"] {
+		@include bp-gt($small) {
+			border: 0 none;
+		}
+		&:before {
+			font-size: rem(20);
+		}
+		&:hover {
+			background-color: $white;
+			color: $midnight;
+		}
+		&:focus {
+			color: $white;
+			background-color: $midnight;
+		}
+	}
+	[class*="item-yt"]:before {
+		font-size: rem(22);
+		text-indent: 1px;
+	}
+
+
+}
+
+
+//  header bottom
+
+
+.layout-header-top + div {
+	@extend %container;
+	@include clearfix;
+
+}
+#block-ecole2-branding,
+#block-useraccountmenu {
+	width: 50%;
+	display: inline-block;
+	@include bp-lt($small) {
+		width: 100%;
+		display: block;
+
+	}
+}
+
+#block-ecole2-branding {
+	float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	// padding-top: rem(15);
+	// padding-bottom: rem(5);
+	img {
+		width: 400px;
+	}
+	@include bp-lt($small) {
+		padding-top: rem(25);
+	}
+}
+
+#block-useraccountmenu {
+	float: right;
+	// padding-top: rem(65);
+	// padding-bottom: rem(20);
+
+	padding-top: 40px;
+	padding-bottom: 23px;
+	@include bp-lt($tabletA) {
+		padding-top: rem(50);
+	}
+	@include bp-lt($small) {
+		padding-top: rem(15);
+		padding-bottom: rem(10);
+	}
+	ul:not(.contextual-links) {
+		text-align: right;
+		@include bp-lt($small) {
+			text-align: center;
+		}
+		li {
+			display: inline-block;
+			&:first-child {
+				margin-right: rem(20);
+				@include bp-lt($xsmall) {
+					margin-right: rem(10);
+					margin-bottom: rem(10);
+				}
+				a {
+					background-color: $blue;
+				}
+			}
+			&:last-child a {
+				background-color: $orange;
+			}
+		}
+		a {
+			@extend .button;
+			height: rem(35);
+			width: rem(142);
+			line-height: rem(40);
+			box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+			text-transform: uppercase;
+			@include bp-lt($small) {
+				width: rem(135);
+			}
+		}
+	}
+}

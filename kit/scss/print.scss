@@ -1,0 +1,22 @@
+/************ Config ************/
+
+
+$themeName: 'pyxicom';
+
+
+/************ Config ************/
+
+@import "vars/colors";
+
+header,
+footer,
+.c-action__gototop,
+.c-nav__icon,
+#toolbar-administration,
+#block-#{$themeName}-main-menu,
+#block-#{$themeName}-breadcrumbs,
+.blog-main .large-4,
+#block-#{$themeName}-local-tasks,
+[role=contentinfo] {
+	display: none !important;
+}

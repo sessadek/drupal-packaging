@@ -1,0 +1,69 @@
+.title-home-outil,
+.title-home,
+#block-titredepage,
+#block-ecole2-page-title {
+	font-family: $amatic;
+	// font-size: rem(60);
+	font-size: rem(60);
+	font-weight: bold;
+	
+	color: $white;
+	padding: rem(15) 0;
+  line-height: 1.2;
+  background-color: $blue;
+  // &:first-letter {
+  // 	text-transform: capitalize;
+  // }
+  @include bp-lt($small) {
+  	font-size: rem(46);
+  }
+	span {
+		display: block;
+		@include bp-lt($small) {
+	  	font-size: rem(36);
+	  }
+	}
+}
+
+.title-home-outil,
+.title-home {
+	text-align: center;
+}
+
+#block-titredepage,
+#block-ecole2-page-title {
+	text-align: left;
+	padding-top: rem(80);
+	padding-bottom: rem(24);
+	@include bp-lt($small) {
+		padding-top: rem(25);
+		padding-bottom: rem(25);
+	}
+	h1 {
+		@extend %container;
+		@include bp-lt($small) {
+			font-size: rem(36);
+		}
+	}
+}
+
+.title-home,
+#block-titredepage,
+#block-ecole2-page-title {
+	background-image: url(#{$image}bg-header.png), url(#{$image}bg-etoile.png);
+  background-position: 28% 22px,75% 13px;
+  background-repeat: no-repeat;
+  @include bp-lt($large) {
+  	background-position: 17% 22px,86% 13px;
+  }
+  @include bp-lt($tabletAL) {
+  	background-position: 8% 22px,95% 13px;
+  }
+  @include bp-lt($medium) {
+  	background-position: 1% 22px,99% 13px;
+  }
+  @include bp-lt($small) {
+  	background-image: url(#{$image}arbre-white-small.png), url(#{$image}bg-etoile-white-small.png);
+  	background-position: 0 bottom,99% 5px;
+  }
+}

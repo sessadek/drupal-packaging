@@ -1,0 +1,31 @@
+// block slide home
+
+.s-slider {
+	position: relative;
+	overflow: hidden;
+	max-width: rem(1024);
+	margin: 0 auto;
+	zoom: 1;
+  display: block;
+}
+
+
+.s-box__slider {
+	height: 300px;
+	width: 100%;
+	display: block;
+}
+
+
+.red {
+	background-color: red;
+}
+
+
+.green {
+	background-color: green;
+}
+
+.maroon {
+	background-color: maroon;
+}

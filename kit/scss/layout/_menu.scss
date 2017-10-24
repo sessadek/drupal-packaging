@@ -1,0 +1,161 @@
+// main menu
+
+// .logo-sticky {
+// 	float: left;
+// 	max-width: rem(200);
+// 	margin-top: 5px;
+// 	display: none;
+// 	&.is-active {
+// 		display: block;
+// 	}
+// }
+
+#block-#{$themeName}-main-menu {
+	background-color: $midnight;
+	border-top: 1px solid $borderColor;
+	// border-bottom: 1px solid $borderColor;
+	position: static;
+	&.is-scrolled {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 100;
+	}
+	// 
+	@include bp-lt($medium) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	>ul:not(.contextual-links) {
+		text-align: right;
+		display: flex;
+    justify-content: flex-end;
+    @extend %container;
+    @include bp-lt($medium) {
+    	display: block;
+    	padding-left: 0;
+    	padding-right: 0;
+		}
+		>li {
+			border-right: 1px solid rgba(255,255,255,0.1);
+			// display: inline-block;
+			min-height: inherit;
+			text-align: left;
+			position: relative;
+			@include bp-lt($medium) {
+				text-align: right;
+			}
+			a {
+				// padding: rem(22) rem(20) rem(18);
+				padding : 15px 1.25rem 1.125rem;
+				@include bp-lt($medium) {
+					padding: rem(10) rem(25) rem(10) rem(12);
+				}
+			}
+			
+			>ul {
+				display: none;
+				position: absolute;
+				width: 250px;
+				background-color: $midnight;
+		    // top: 65px;
+		    top: 50px;
+		    z-index: 100;
+				li {
+					display: block;
+					width: 100%;
+					border-top: 1px solid rgba(255,255,255,0.1);
+
+					a {
+						display: block;
+						width: 100%;
+						transition: 0.3s padding-left;
+						&:hover {
+							padding-left: 30px;
+						}
+					}
+				}
+			}
+			&:hover {
+				ul {
+					display: block;
+				}
+			}
+		}
+	}
+
+	
+	a {
+		
+		font-family: $khand;
+		font-size: rem(24);
+		color: $white;
+		// min-height: rem(60);
+		height: rem(50);
+		display: inline-block;
+		transition: 0.3s all;
+		text-decoration: none;
+		@include bp-lt($medium) {
+			height: auto;
+		}
+		&:hover {
+			background-color: $midnight--03;
+		}
+	}
+}
+
+
+
+//menu responsive
+$width--menu: 260;
+
+@include bp-lt($medium) {
+	#block-#{$themeName}-main-menu {
+		width: rem($width--menu);
+		height: rem(162);
+		position: fixed;
+    top: 0;
+    right: 0;
+    border-top: 0 none;
+		border-bottom: 0 none;
+    height: 100%;
+    z-index: 999;
+    transform: translateX(#{$width--menu}px);
+    transition: 0.3s transform;
+    overflow-y: scroll;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    transition: 0.3s all;
+    &::-webkit-scrollbar {
+	    display: none;
+		}
+    &.is-inViewport {
+    	transform: translateX(0);
+    	position: fixed;
+    	ul:not(.contextual-links) > li a {
+    		opacity: 1;
+    	}
+    }
+    >ul:not(.contextual-links) {
+    	>li {
+    		display: block;
+    		border-right: 0 none;
+    		
+    		a {
+    			display: inherit;
+    			font-size: rem(24);
+    		}
+    		>ul {
+    			position: static;
+    			width: auto;
+    			a {
+    				background-color: opacify($midnight, 0.8);
+    				padding-left: rem(30);
+    			}
+    		}
+    	}
+	  }
+	}
+}
+
+

@@ -1,0 +1,57 @@
+.node-actualites {
+	@extend %container;
+	padding-top: rem(50);
+	padding-bottom: rem(50);
+}
+
+.node-actualites {
+	position: relative;
+	@include bp-lt($small) {
+		padding-left: 0;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 98%;
+			height: 1px;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+			background-color: $midnight--02;
+		}
+	}
+	h2 {
+		font-weight: bold;
+		font-size: rem(36);
+		font-family: $khand;
+		color: $blue;
+		margin-bottom: rem(10);
+		padding-top: 4px;
+		line-height: 1.1;
+		
+		a {
+			display: block;
+			color: $blue;
+
+		}
+	}
+	h3, p {
+		font-family: $lato;
+		font-size: rem(13);
+    word-spacing: 1px;
+	}
+	p {
+		line-height: 1.3;
+	}
+	.node-readmore a {
+		@extend .button;
+		max-width: rem(142);
+		text-transform: uppercase;
+		margin-right: auto;
+		margin-left: auto;
+
+		margin-top: rem(30);
+		@include bp-lt($small) {
+			margin-right: auto;
+		}
+	}
+}

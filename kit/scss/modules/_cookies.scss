@@ -1,0 +1,45 @@
+// block cookies
+#sliding-popup {
+	background: $blue !important;
+  padding-top: rem(5);
+}
+
+
+.popup-content {
+	#popup-text {
+		h2, p {
+			font-family: $lato;
+			color: $white !important;
+		}
+		h2 {
+			font-size:rem(20) !important;
+			@include bp-lt($small) {
+				line-height: 1.1 !important;
+			}
+		}
+		p{
+		 	font-size:rem(15) !important;
+		}  
+	} 
+}
+
+#popup-buttons{
+	button{
+		background:$white !important;
+    height: 2.5rem;
+		border: 1px solid $blue !important;
+		color:$blue !important;
+    font-family: $lato !important;
+		font-size:rem(13) !important;
+		font-weight: normal !important;
+    text-shadow: none !important;
+	  font-weight: 600 !important;
+    border-radius: 0px !important;
+    transition: 0.3s all;
+    &:hover{
+      border: 1px solid $white !important;
+			color:$white !important;
+			background:$blue !important;
+    }
+	}
+}

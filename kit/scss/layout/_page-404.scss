@@ -1,0 +1,81 @@
+/*404*/
+.pageErreur {
+	width: 100%;
+	max-width: rem(900);
+	margin: 2.14286rem auto;
+	padding: 5.71429rem rem(10);
+	overflow: hidden;
+	position: relative;
+	h2 {
+		font-family: $khand;
+		letter-spacing: 2px;
+	}
+	h3, p, a {
+		font-family: $lato;
+	}
+	@include bp-lt($small){
+		padding: rem(40) rem(20);
+	}
+	.txtLeft,  .txtRight {
+			float: left;
+			overflow: hidden;
+			width: 50%;
+			@include bp-lt($small){
+				width: 100%
+				}
+	}
+	.txtLeft {
+			padding: 0 0.71429rem 0 0;
+			@include bp-lt($small){
+				padding-bottom: 1.42857rem;
+				margin-bottom: 1.42857rem;
+				border-bottom: 5px solid $blue;
+		}
+	}
+	.txtLeft h2 {
+			font-size: rem(80);
+			font-weight: bold;
+			line-height: 1.2;
+			text-align: right;
+			color:  $blue;
+			margin: 0;
+			@include bp-lt($small){
+			font-size: 3.57143rem;
+			text-align: center;
+		}
+	}
+		.txtLeft .part01 {
+			display: block;
+	}
+
+	.txtRight {
+		padding: 1rem 0 0 1.07143rem;
+		font-size: 1.42857rem;
+		line-height: 1.2;
+		text-align: justify;
+	}
+	
+	.txtRight h3 {
+		margin-bottom: 1.42857rem;
+		text-align: left;
+		font-weight: 600;
+		color: $midnight;
+		font-size: rem(24);
+	}
+	a {
+		color:$blue;
+		text-decoration: underline;
+	}
+	&:after {
+			content: "";
+			position: absolute;
+			top: 10%;
+			left: 50%;
+			height: 80%;
+			width: 0.35714rem;
+			background:  $blue;
+			@include bp-lt($small){
+			display: none;
+		}
+	}
+}

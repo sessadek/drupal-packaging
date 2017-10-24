@@ -1,0 +1,46 @@
+
+
+
+.pager {
+	margin-bottom: rem(30);
+	li {
+		display: inline-block;
+		background-color: $gray;
+		color: $midnight--02;
+		font-weight: 600;
+		font-size: rem(24);
+		font-family: $khand;
+		border-radius: 25%;
+		width: 36px;
+		height: 36px;
+		text-align: center;
+		line-height: 36px;
+		overflow: hidden;
+		&.pager__item--ellipsis {
+			background-color: transparent;
+		}
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+		&.is-active {
+			background-color: $midnight--02;
+			&, a {
+				color: $gray;
+			}
+		}
+	}
+	a {
+		display: block;
+		transition: 0.3s all;
+		color: $midnight--02;
+		&:hover {
+			background-color: $midnight--02;
+			color: $gray;
+		}
+	}
+	@include bp-lt($small) {
+		margin-top: rem(30);
+		// margin-bottom: rem(10);
+	}
+}

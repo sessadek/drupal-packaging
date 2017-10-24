@@ -1,0 +1,46 @@
+// block pratique
+
+.user-register-form,
+.user-login-form,
+.user-pass {
+	padding: rem(50) rem(10);
+	max-width: rem(650);
+	margin: 0 auto;
+	label {
+		// display: block;
+		margin-bottom: 5px;
+		font-size: 16px;
+		font-weight: 600;
+		font-family: $khand;
+	}
+	.description, p {
+		font-family: $lato;
+		font-size: 14px;
+	}
+	.form-item{
+		margin-bottom: rem(25);
+		[type=text],[type=password] {
+			margin-bottom: 5px;
+	    padding: 0 rem(20);
+	    font-size: rem(18);
+	    box-shadow: none;
+	    &.error{
+	    	border:1px solid $error;
+	    }
+		}
+	}
+	
+	summary {
+		margin-bottom: rem(20);
+		outline: none;
+		& + .form-item {
+			padding-left: rem(20);
+		}
+	}
+}
+
+.user-pass {
+	p {
+		margin-bottom: rem(30);
+	}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "aquarium",
+  "description": "Starter Kit (Aquarium)",
+  "main": "index.js",
+  "authors": [
+    "Anas Abdennaim, Pyxicom"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Pyxicom",
+    "starter",
+    "kit"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "package.json",
+    "src",
+    "css",
+    "fonts",
+    "images",
+    "demo",
+    "dev",
+    "src",
+    "build"
+  ],
+  "homepage": "http://www.pyxicom.com/",
+  "devDependencies": {
+    "jquery-validation": "^1.16.0",
+    "jquery.uniform": "uniform#^4.0.1",
+    "flexslider": "woothemes-flexslider#^2.6.3",
+    "jquery-colorbox": "^1.6.4",
+    "jScrollPane": "jscrollpane#^2.0.23",
+    "swiper": "^3.4.1"
+  }
+}

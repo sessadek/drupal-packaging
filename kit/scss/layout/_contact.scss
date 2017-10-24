@@ -1,0 +1,140 @@
+.webform-submission-contact-add-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  max-width: rem(740);
+  margin: 0 auto;
+  padding: rem(50) rem(20);
+  background-image: url(../img/bg-header.png), url(../img/bg-etoile.png);
+  background-position: 10px 135%, 99% 1%;
+  background-repeat: no-repeat;
+  background-color:  $blue;
+  z-index: 102;
+
+  [role="contentinfo"] {
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+  }
+  
+  [role="alert"] {
+    margin-bottom: rem(20);
+  }
+  h2 {
+    font-size: rem(42);
+    text-align: center;
+    margin-bottom: rem(20);
+    font-weight: 700;
+    font-family: $amatic;
+    color: $white;
+    text-transform: lowercase;
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .form-item {
+    position: relative;
+  	&:not(.form-item-message):not(.form-item-subject):not(.form-item-captcha-response):not([id*="edit-info-obg"]) {
+  		@include bp-gt($small) {
+	  		width: 49%;
+		  	display: inline-block;
+		  	&:nth-child(odd) {
+		  		float: left;
+		  	}
+		  	&:nth-child(even) {
+		  		float: right;
+		  	}
+	  	}
+	  }
+    &.form-item-subject {
+      clear: both;
+    }
+  }
+  .form-item-captcha-response {
+    position: relative;
+    label, span, .description {
+      display: block;
+      margin-bottom: rem(16);
+      font-family: $lato;
+      font-size: rem(14);
+      text-align: left;
+      color: $white;
+    }
+    .description {
+      text-align: center;
+    }
+    label[for="edit-captcha-response"] {
+      padding-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  #edit-captcha-response {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 170px;
+    max-width: calc(100% - 170px);
+  }
+      
+  .obg {
+    margin-bottom: rem(16);
+    font-family: $lato;
+    font-size: rem(12);
+    text-align: right;
+    color: $white;
+
+  }
+  label.error {
+    color: $orange;
+  }
+  .field-prefix,
+  label[for="edit-captcha-response"] {
+    text-align: left;
+  }
+
+  .webform-confirmation__message {
+    font-family: "Amatic SC",cursive;
+    color: $white;
+    text-align: center;
+    font-size: rem(42);
+    text-transform: uppercase;
+    padding: rem(60) 0 rem(10);
+    font-weight: bold;
+  }
+}
+
+
+.block-form-contact {
+  display: none;
+}
+
+.b-close__popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(17,18,18,0.7);
+  z-index: 101;
+}
+
+#hidden.container {
+	display: block !important;
+}
+
+
+
+.user-pass {
+  @extend %container;
+  padding-bottom: rem(30);
+  p {
+  	margin-bottom: rem(20);
+  	font-family: $lato;
+  	font-size: rem(14);
+  }
+  .form-submit {
+  	margin-bottom: 20px;
+  }
+}

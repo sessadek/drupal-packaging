@@ -1,0 +1,53 @@
+[role="contentinfo"],
+[role="alert"] {
+	border-style: solid;
+	border-width: 1px;
+	font-family: $lato;
+	padding: rem(20) rem(25);
+	font-size: rem(16);
+	text-align: left;
+  max-width: 1024px;
+  margin: 0 auto;
+	ul {
+		margin-bottom: rem(15);
+	}
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+[role="contentinfo"] {
+	color: $black;
+	background-color: $success;
+	border-color: #83b685;
+}
+
+
+[role="alert"] {
+	color: $white;
+	background-color: $error;
+	border-color: #ffb0aa;
+}
+
+// .ajax-progress-throbber .throbber {
+// 	background: transparent url("#{$image}throbber-active.gif") no-repeat 0px center
+// 	// background: transparent url(../../../images/core/throbber-active.gif) no-repeat 0px center
+// }
+
+.ajax-progress-throbber .throbber {
+  background: transparent url(#{$image}throbber-active.svg) no-repeat 0px center;
+  display: inline-block;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+
+// #block-ecole2-content {
+// 	display: block;
+// 	font-family: $khand;
+// 	font-weight: 600;
+// 	text-align: center;
+// 	font-size: rem(42);
+// 	padding: rem(50) 0 rem(40);
+// }

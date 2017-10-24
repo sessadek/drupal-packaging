@@ -1,0 +1,157 @@
+// footer
+
+footer {
+	background-color: $midnight;
+	padding-top: rem(20);
+	a {
+		color: $white;
+	}
+	@include bp-lt($small) {
+		padding-top: 0;
+	}
+	@include bp-gt($mobileDefault) {
+        position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	}
+}
+
+
+@include bp-gt($mobileDefault) {
+	html {
+		position: relative;
+		min-height: 100%;
+		padding-bottom: 149px;
+	}
+}
+
+
+#block-ecole2-footer,
+#block-menupieddepage2 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: rem(20) rem(15);
+	text-align: center;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	a {
+		color: $white;
+		font-family: $lato;
+	}
+}
+
+// footer top
+
+#block-ecole2-footer {
+	@include bp-lt($small) {
+		padding-top: rem(30);
+		padding-bottom: 0;
+	}
+	a {
+		font-size: rem(18);
+		@include bp-lt($small) {
+			font-size: rem(14);
+		}
+
+	}
+	li:nth-child(-n+3) {
+		margin-right: rem(50);
+		@include bp-lt($small) {
+			display: block;
+			margin-bottom: 15px;
+			margin-right: 0;
+			text-align: left;
+		}
+		a {
+
+			&:before {
+				content: '>';
+		    margin-right: 3px;
+		    display: inline-block;
+		    transition: 0.3s transform;
+			}
+			&:hover:before {
+				transform: translateX(-5px);
+			}
+		}
+	}
+	li:nth-last-child(2) {
+		margin-right: rem(10);
+	}
+	[class*="item-"][class*="-footer"] {
+		background-color: $white;
+		color: $midnight;
+		border-color: transparent;
+		// transition: 0.3s all;
+		text-align: center;
+		position: relative;
+		&:before {
+			font-size: rem(22);
+			position: absolute;
+	    top: 50%;
+	    left: 48%;
+	    transform: translate(-50%, -50%);
+		}
+		&:hover {
+			color: $white;
+			background-color: $midnight;
+			border-color: $white;
+		}
+		@include bp-lt($small) {
+			margin-top: 5px;
+		}
+	}
+}
+
+
+// footer bottom
+
+#block-menupieddepage2 {
+	@include bp-lt($small) {
+		padding-bottom: rem(10);
+
+	}
+	li:not(:last-child):after {
+		content: '-';
+		margin-left: 3px;
+  	margin-right: 3px;
+		color: $white;
+		position: relative;
+		top: -1px;
+		@include bp-lt($small) {
+			margin-left: 0;
+  		margin-right: 0;
+  		top: 0;
+		}
+	}
+	li {
+		@include bp-lt($small) {
+			margin-bottom: 15px;
+		}
+	}
+	a {
+		font-size: rem(14);
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: $white;
+			transform: scaleX(0);
+			transition: 0.3s transform;
+			bottom: -5px;
+		}
+		&:hover:before {
+			transform: scaleX(1);
+		}
+		@include bp-lt($small) {
+			font-size: rem(10);
+		}
+	}
+}
