@@ -24,10 +24,6 @@ kit/scss/modules/_form.scss
 ### gototop
 kit/scss/modules/_gototop.scss
 
-
-### gototop
-kit/scss/modules/_gototop.scss
-
 ### login
 kit/scss/modules/_login.scss
 
